@@ -1,0 +1,84 @@
+{
+  "events": [
+    {
+      "posture": "default",
+      "flag": "exp",
+      "id": "quest_rule1",
+      "value": 1,
+      "actions": [
+        {
+          "fx": "base\\fx\\devices\\fuel_dispener\\d_fuel_dispener_explosion_001.effect",
+          "target": "Node1",
+          "do": "play_fx"
+        },
+        {
+          "seconds": 1,
+          "target": "quest",
+          "do": "wait"
+        },
+        {
+          "fx": "base\\fx\\devices\\explosive_server\\d_explosive_server_explosion.effect",
+          "target": "Node1",
+          "do": "play_fx"
+        }
+      ],
+      "when": "timer",
+      "watch": "quest",
+      "after": 1,
+      "repeats": true
+    }
+  ],
+  "fixer": "Wakako",
+  "briefing": "",
+  "lifecycle": {
+    "finally": {
+      "actions": {}
+    },
+    "win": {
+      "groups": [
+        [
+          {
+            "when": "timer",
+            "after": 5000
+          }
+        ]
+      ]
+    },
+    "lose": {
+      "groups": {}
+    },
+    "setup": {
+      "actions": [
+        {
+          "op": "set",
+          "value": 1,
+          "flag": "exp",
+          "do": "set_flag"
+        }
+      ]
+    }
+  },
+  "objective": {
+    "type": "kill_target"
+  },
+  "entities": [
+    {
+      "events": {},
+      "y": -170.50410461426,
+      "radius": 3,
+      "action": "zone",
+      "fwd_y": -0.86439955234528,
+      "z": 7.7072296142578,
+      "label": "Node1",
+      "shape": "sphere",
+      "fwd_x": 0.50280594825745,
+      "x": -1224.1203613281
+    }
+  ],
+  "flags": {},
+  "title": "Explosions",
+  "version": 5,
+  "reward_xp": 250,
+  "reward_money": 1000,
+  "mission_id": "explosions"
+}

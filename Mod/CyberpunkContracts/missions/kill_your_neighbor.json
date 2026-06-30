@@ -1,0 +1,85 @@
+{
+  "version": 5,
+  "events": {},
+  "flags": {},
+  "mission_id": "kill_your_neighbor",
+  "title": "Kill Your neighbor",
+  "fixer": "Wakako",
+  "lifecycle": {
+    "win": {
+      "groups": [
+        [
+          {
+            "watch": "Bad Guy",
+            "when": "dies"
+          }
+        ]
+      ]
+    },
+    "lose": {
+      "groups": [
+        {}
+      ]
+    },
+    "setup": {
+      "actions": {}
+    },
+    "finally": {
+      "actions": {}
+    }
+  },
+  "objective": {
+    "type": "kill_target"
+  },
+  "entities": [
+    {
+      "startAttitude": "neutral",
+      "id": "Character.q001_scavenger_shotgun3",
+      "z": 123.08239746094,
+      "label": "Bad Guy",
+      "fwd_x": -0.087342950563877,
+      "fwd_y": -0.99617830180485,
+      "x": -1445.4619140625,
+      "y": 1260.2918701172,
+      "events": {}
+    },
+    {
+      "sz": 3,
+      "sx": 4,
+      "sy": 4,
+      "z": 123.08239746094,
+      "label": "Trigger",
+      "action": "zone",
+      "x": -1445.4974365234,
+      "y": 1257.2077636719,
+      "shape": "box",
+      "events": [
+        {
+          "zone": "Trigger",
+          "when": "proximity",
+          "watch": "Trigger",
+          "id": "Trigger_rule1",
+          "actions": [
+            {
+              "text": "Hey fuck your package you gunna die now",
+              "do": "speak",
+              "target": "Bad Guy"
+            },
+            {
+              "do": "set_attitude",
+              "target": "Bad Guy"
+            },
+            {
+              "text": "Fuck you!",
+              "do": "speak",
+              "target": "Trigger"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "briefing": "Your neighbor stole your package, get it back."
+}

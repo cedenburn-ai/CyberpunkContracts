@@ -1,0 +1,117 @@
+{
+  "objective": {
+    "type": "kill_target"
+  },
+  "lifecycle": {
+    "lose": {
+      "groups": {}
+    },
+    "setup": {
+      "actions": {}
+    },
+    "finally": {
+      "actions": {}
+    },
+    "win": {
+      "groups": [
+        [
+          {
+            "after": 5000,
+            "when": "timer"
+          }
+        ]
+      ]
+    }
+  },
+  "events": {},
+  "title": "Patrol test",
+  "entities": [
+    {
+      "fwd_x": 0.018168467756255,
+      "startAttitude": "neutral",
+      "id": "Character.Jackie",
+      "x": -1175.4437255859,
+      "y": 1463.232421875,
+      "z": 26.210311889648,
+      "fwd_y": 0.99983493976725,
+      "label": "Jackie",
+      "events": [
+        {
+          "when": "on_enter",
+          "posture": "default",
+          "watch": "Jackie",
+          "id": "Jackie_rule1",
+          "actions": [
+            {
+              "target": "Jackie",
+              "do": "speak",
+              "text": "Hey buddy!"
+            },
+            {
+              "target": "Jackie",
+              "do": "wait",
+              "seconds": 2
+            },
+            {
+              "target": "Jackie",
+              "do": "set_patrol",
+              "nodes": [
+                "Node1",
+                "Node2",
+                "Node3",
+                "Node4"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "radius": 2,
+      "x": -1172.7624511719,
+      "y": 1467.9929199219,
+      "action": "zone",
+      "z": 26.121726989746,
+      "label": "Node1",
+      "events": {},
+      "shape": "sphere"
+    },
+    {
+      "radius": 2,
+      "x": -1173.6599121094,
+      "y": 1476.0660400391,
+      "action": "zone",
+      "z": 26.079666137695,
+      "label": "Node2",
+      "events": {},
+      "shape": "sphere"
+    },
+    {
+      "radius": 2,
+      "x": -1178.7780761719,
+      "y": 1480.068359375,
+      "action": "zone",
+      "z": 26.074562072754,
+      "label": "Node3",
+      "events": {},
+      "shape": "sphere"
+    },
+    {
+      "radius": 2,
+      "x": -1175.0872802734,
+      "y": 1493.7933349609,
+      "action": "zone",
+      "z": 25.864929199219,
+      "label": "Node4",
+      "events": {},
+      "shape": "sphere"
+    }
+  ],
+  "fixer": "Wakako",
+  "flags": {},
+  "briefing": "patrol test",
+  "version": 5,
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "mission_id": "patrol_test"
+}

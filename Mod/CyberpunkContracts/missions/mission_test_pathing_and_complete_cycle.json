@@ -1,0 +1,143 @@
+{
+  "fixer": "Wakako",
+  "objective": {
+    "type": "kill_target"
+  },
+  "lifecycle": {
+    "win": {
+      "groups": [
+        [
+          {
+            "after": 500,
+            "when": "timer"
+          }
+        ]
+      ]
+    },
+    "lose": {
+      "groups": {}
+    },
+    "setup": {
+      "actions": {}
+    },
+    "finally": {
+      "actions": {}
+    }
+  },
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "entities": [
+    {
+      "y": -197.50286865234,
+      "startAttitude": "neutral",
+      "fwd_x": -0.54849333644381,
+      "label": "MaxTakLeftDoor",
+      "z": 9.2560806274414,
+      "id": "Character.mq030_max_tac_no_combat",
+      "events": [
+        {
+          "id": "MaxTakLeftDoor_rule1",
+          "when": "on_enter",
+          "repeats": true,
+          "watch": "MaxTakLeftDoor",
+          "posture": "default",
+          "actions": [
+            {
+              "do": "set_patrol",
+              "nodes": [
+                "Path1",
+                "Path3"
+              ],
+              "target": "MaxTakPatrol"
+            }
+          ]
+        }
+      ],
+      "fwd_y": -0.83615492576241,
+      "x": -1204.4509277344
+    },
+    {
+      "y": -195.91984558105,
+      "startAttitude": "neutral",
+      "fwd_x": -0.83758828827085,
+      "label": "MAxTakRightDoor",
+      "z": 9.2560806274414,
+      "id": "Character.mq030_max_tac_no_combat",
+      "events": {},
+      "fwd_y": 0.5463019854911,
+      "x": -1209.7490234375
+    },
+    {
+      "y": -188.78363037109,
+      "startAttitude": "neutral",
+      "fwd_x": -0.52418739300024,
+      "label": "MaxTakPatrol",
+      "z": 17.22607421875,
+      "id": "Character.prevention_maxtac_rifle_wa",
+      "events": [
+        {
+          "id": "MaxTakPatrol_rule1",
+          "when": "timer",
+          "watch": "MaxTakPatrol",
+          "posture": "default",
+          "actions": [
+            {
+              "do": "move_to",
+              "destination": "Path1",
+              "target": "MaxTakPatrol"
+            },
+            {
+              "do": "speak",
+              "text": "ahhhhhh",
+              "target": "MaxTakPatrol"
+            }
+          ]
+        }
+      ],
+      "fwd_y": -0.85160294563817,
+      "x": -1209.0283203125
+    },
+    {
+      "y": -196.67761230469,
+      "label": "Path1",
+      "action": "zone",
+      "shape": "box",
+      "z": 17.22607421875,
+      "sz": 4,
+      "sx": 4,
+      "events": {},
+      "sy": 4,
+      "x": -1201.0625
+    },
+    {
+      "y": -193.11181640625,
+      "label": "Path2-Downstairs",
+      "action": "zone",
+      "shape": "box",
+      "z": 9.2160797119141,
+      "sz": 2,
+      "sx": 2,
+      "events": {},
+      "sy": 2,
+      "x": -1204.5639648438
+    },
+    {
+      "y": -189.6283416748,
+      "label": "Path3",
+      "action": "zone",
+      "shape": "box",
+      "z": 17.22607421875,
+      "sz": 3,
+      "sx": 4,
+      "sy": 4,
+      "events": {},
+      "x": -1195.3663330078
+    }
+  ],
+  "title": "Mission Test Pathing and Complete Cycle",
+  "version": 5,
+  "events": {},
+  "flags": {},
+  "mission_id": "mission_test_pathing_and_complete_cycle",
+  "briefing": ""
+}

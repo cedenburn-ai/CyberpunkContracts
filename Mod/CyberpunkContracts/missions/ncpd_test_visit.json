@@ -1,0 +1,215 @@
+{
+  "version": 5,
+  "flags": {},
+  "lifecycle": {
+    "setup": {
+      "actions": {}
+    },
+    "lose": {
+      "groups": {}
+    },
+    "finally": {
+      "actions": {}
+    },
+    "win": {
+      "groups": [
+        [
+          {
+            "value": 1,
+            "when": "flag",
+            "flag": "Finished"
+          }
+        ]
+      ]
+    }
+  },
+  "title": "NCPD Test Visit",
+  "reward_xp": 250,
+  "mission_id": "ncpd_test_visit",
+  "objective": {
+    "type": "kill_target"
+  },
+  "briefing": "Go talk to the chief",
+  "fixer": "Wakako",
+  "reward_money": 1000,
+  "events": {},
+  "entities": [
+    {
+      "y": -2279.2456054688,
+      "id": "Character.nok_ncpd_enforcer_shotgun2_tactician_ma_rare",
+      "fwd_x": 0.6958021706507,
+      "label": "Left Door",
+      "startAttitude": "neutral",
+      "fwd_y": -0.71823348523845,
+      "z": 16.026840209961,
+      "x": -2183.1489257813
+    },
+    {
+      "z": 16.027229309082,
+      "startAttitude": "neutral",
+      "fwd_x": 0.87638252973557,
+      "y": -2284.6328125,
+      "id": "Character.nok_ncpd_enforcer_shotgun2_tactician_ma_rare",
+      "label": "Right Door",
+      "x": -2188.3210449219,
+      "events": [
+        {
+          "id": "Right Door_rule1",
+          "actions": [
+            {
+              "do": "set_immortal",
+              "target": "Right Door"
+            }
+          ],
+          "watch": "Right Door",
+          "posture": "default",
+          "when": "on_enter"
+        }
+      ],
+      "fwd_y": 0.48161590099335
+    },
+    {
+      "y": -2283.33203125,
+      "shape": "sphere",
+      "x": -2183.3076171875,
+      "label": "FrontDoorZone",
+      "z": 15.773658752441,
+      "radius": 5,
+      "events": [
+        {
+          "when": "proximity",
+          "posture": "default",
+          "watch": "FrontDoorZone",
+          "id": "FrontDoorZone_rule1",
+          "actions": [
+            {
+              "do": "speak",
+              "text": "Hey are you that guy chiefs looking for?, V?",
+              "target": "Left Door"
+            },
+            {
+              "do": "draw_weapon",
+              "target": "Right Door",
+              "at": "Left Door"
+            },
+            {
+              "do": "draw_weapon",
+              "target": "Left Door",
+              "at": "Right Door"
+            },
+            {
+              "do": "wait",
+              "seconds": 3,
+              "target": "FrontDoorZone"
+            },
+            {
+              "do": "speak",
+              "text": "Yeah its him alright.",
+              "target": "Right Door"
+            },
+            {
+              "do": "wait",
+              "seconds": 4,
+              "target": "FrontDoorZone"
+            },
+            {
+              "do": "speak",
+              "text": "Ok Head on in, don't cause any trouble merc.",
+              "target": "Left Door"
+            },
+            {
+              "do": "wait",
+              "seconds": 2,
+              "target": "FrontDoorZone"
+            },
+            {
+              "target": "FrontDoor",
+              "do": "open"
+            }
+          ]
+        }
+      ],
+      "action": "zone"
+    },
+    {
+      "z": 16.02734375,
+      "x": -2186.2448730469,
+      "class": "ToCName{ hash_lo = 0x608CE6C9, hash_hi = 0x037CF773 --[[ Door --]] }",
+      "label": "FrontDoor",
+      "action": "device",
+      "y": -2280.4377441406,
+      "events": {},
+      "hash": "4221453410560655363"
+    },
+    {
+      "z": 16.051223754883,
+      "startAttitude": "friendly",
+      "x": -2193.2407226563,
+      "fwd_y": -0.70328212429701,
+      "id": "Character.q104_gas_station_kangtao_shotgun_tier2",
+      "label": "CoffeePolice",
+      "y": -2279.0971679688,
+      "events": {},
+      "fwd_x": -0.71091086195407
+    },
+    {
+      "y": -2275.9787597656,
+      "shape": "sphere",
+      "x": -2188.1938476563,
+      "label": "CoffeeGuyTrigggerZone",
+      "z": 16.02734375,
+      "radius": 2,
+      "events": [
+        {
+          "when": "proximity",
+          "posture": "default",
+          "watch": "CoffeeGuyTrigggerZone",
+          "id": "CoffeeGuyTrigggerZone_rule1",
+          "actions": [
+            {
+              "do": "speak",
+              "text": "This coffee tastes like shit...",
+              "target": "CoffeePolice"
+            },
+            {
+              "do": "wait",
+              "seconds": 1,
+              "target": "CoffeeGuyTrigggerZone"
+            },
+            {
+              "destination": "Coffee_WindowZone",
+              "do": "move_to",
+              "target": "CoffeePolice",
+              "face": "Coffee_WindowZone"
+            },
+            {
+              "do": "wait",
+              "seconds": 45,
+              "target": "CoffeeGuyTrigggerZone"
+            },
+            {
+              "do": "speak",
+              "text": "I hate this place...",
+              "target": "CoffeePolice"
+            }
+          ]
+        }
+      ],
+      "action": "zone"
+    },
+    {
+      "z": 16.254768371582,
+      "y": -2281.7873535156,
+      "sx": 4,
+      "action": "zone",
+      "fwd_y": -0.69727611541748,
+      "shape": "box",
+      "sy": 4,
+      "label": "Coffee_WindowZone",
+      "sz": 3,
+      "x": -2190.4367675781,
+      "events": {},
+      "fwd_x": 0.7168025970459
+    }
+  ]
+}

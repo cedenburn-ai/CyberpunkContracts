@@ -1,0 +1,218 @@
+{
+  "version": 5,
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "lifecycle": {
+    "win": {
+      "groups": [
+        [
+          {
+            "watch": "BOSS",
+            "when": "dies"
+          }
+        ]
+      ]
+    },
+    "lose": {
+      "groups": {}
+    },
+    "setup": {
+      "actions": {}
+    },
+    "finally": {
+      "actions": {}
+    }
+  },
+  "objective": {
+    "type": "kill_target"
+  },
+  "entities": [
+    {
+      "startAttitude": "neutral",
+      "y": 1024.6877441406,
+      "fwd_y": 0.99767127690146,
+      "id": "Character.q001_scavenger_shotgun3",
+      "x": -1219.4560546875,
+      "z": 16.354148864746,
+      "label": "BOSS",
+      "fwd_x": 0.06820574202966
+    },
+    {
+      "shape": "box",
+      "action": "zone",
+      "z": 16.354209899902,
+      "label": "WalkPathNode1",
+      "sx": 2,
+      "sy": 2,
+      "y": 1042.7580566406,
+      "sz": 2,
+      "x": -1204.1081542969
+    },
+    {
+      "shape": "box",
+      "action": "zone",
+      "z": 16.268020629883,
+      "label": "WalkPathNode2",
+      "sx": 2,
+      "sy": 2,
+      "y": 1044.2180175781,
+      "sz": 2,
+      "x": -1215.248046875
+    },
+    {
+      "shape": "box",
+      "action": "zone",
+      "z": 16.366065979004,
+      "label": "WalkPathNode3",
+      "sx": 2,
+      "sy": 2,
+      "y": 1040.6590576172,
+      "sz": 2,
+      "x": -1223.2568359375
+    },
+    {
+      "shape": "box",
+      "action": "zone",
+      "z": 16.354148864746,
+      "label": "WalkPathNode4-Boss",
+      "events": {},
+      "sx": 2,
+      "sy": 2,
+      "y": 1029.1164550781,
+      "sz": 2,
+      "x": -1219.3767089844
+    },
+    {
+      "id": "Character.q001_scavenger_shotgun3",
+      "fwd_x": -0.97362140865334,
+      "fwd_y": -0.22816956986394,
+      "startAttitude": "neutral",
+      "postures": [
+        "PatrolPosture"
+      ],
+      "events": [
+        {
+          "id": "PathingGuard_rule1",
+          "posture": "PatrolPosture",
+          "when": "on_enter",
+          "watch": "PathingGuard",
+          "actions": [
+            {
+              "target": "PathingGuard",
+              "destination": "WalkPathNode1",
+              "do": "move_to"
+            }
+          ]
+        },
+        {
+          "id": "PathingGuard_rule2",
+          "when": "on_enter",
+          "watch": "PathingGuard",
+          "actions": [
+            {
+              "target": "PathingGuard",
+              "destination": "WalkPathNode1",
+              "do": "move_to"
+            },
+            {
+              "target": "PathingGuard",
+              "posture": "PatrolPosture",
+              "do": "set_posture"
+            }
+          ]
+        },
+        {
+          "zone": "WalkPathNode1",
+          "id": "PathingGuard_rule3",
+          "posture": "PatrolPosture",
+          "when": "inside",
+          "watch": "PathingGuard",
+          "actions": [
+            {
+              "target": "PathingGuard",
+              "destination": "WalkPathNode2",
+              "do": "move_to"
+            }
+          ]
+        },
+        {
+          "zone": "WalkPathNode2",
+          "id": "PathingGuard_rule4",
+          "posture": "PatrolPosture",
+          "when": "inside",
+          "watch": "PathingGuard",
+          "actions": [
+            {
+              "target": "PathingGuard",
+              "destination": "WalkPathNode3",
+              "do": "move_to"
+            }
+          ]
+        },
+        {
+          "zone": "WalkPathNode4-Boss",
+          "id": "PathingGuard_rule6",
+          "posture": "PatrolPosture",
+          "when": "inside",
+          "watch": "PathingGuard",
+          "actions": [
+            {
+              "target": "PathingGuard",
+              "text": "Hey Boss, Hows it going",
+              "do": "speak"
+            },
+            {
+              "target": "PathingGuard",
+              "seconds": 2,
+              "do": "wait"
+            },
+            {
+              "target": "BOSS",
+              "text": "Get Back to work",
+              "do": "speak"
+            },
+            {
+              "target": "PathingGuard",
+              "seconds": 1,
+              "do": "wait"
+            },
+            {
+              "target": "PathingGuard",
+              "text": "Alright... Alright..",
+              "do": "speak"
+            },
+            {
+              "target": "PathingGuard",
+              "posture": "PatrolPosture",
+              "do": "set_posture"
+            }
+          ]
+        },
+        {
+          "zone": "WalkPathNode3",
+          "id": "PathingGuard_rule6",
+          "posture": "PatrolPosture",
+          "when": "inside",
+          "watch": "PathingGuard",
+          "actions": [
+            {
+              "target": "PathingGuard",
+              "destination": "WalkPathNode4-Boss",
+              "do": "move_to"
+            }
+          ]
+        }
+      ],
+      "x": -1197.4847412109,
+      "y": 1047.1942138672,
+      "z": 16.354217529297,
+      "label": "PathingGuard"
+    }
+  ],
+  "events": {},
+  "title": "Shoot out in the dumps",
+  "flags": {},
+  "fixer": "Mr. Hands",
+  "mission_id": "shoot_out_in_the_dumps",
+  "briefing": "Go find and kill the scavs in the dump"
+}

@@ -1,0 +1,158 @@
+{
+  "fixer": "Wakako",
+  "objective": {
+    "type": "kill_target"
+  },
+  "briefing": "",
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "lifecycle": {
+    "win": {
+      "groups": {}
+    },
+    "lose": {
+      "groups": {}
+    },
+    "setup": {
+      "actions": {}
+    },
+    "finally": {
+      "actions": {}
+    }
+  },
+  "entities": [
+    {
+      "y": -212.22409057617,
+      "startAttitude": "neutral",
+      "fwd_x": -0.82694612525512,
+      "label": "Judy",
+      "postures": [
+        "Patrol"
+      ],
+      "z": 7.8948822021484,
+      "id": "Character.Judy",
+      "events": [
+        {
+          "id": "Judy_rule2",
+          "when": "on_enter",
+          "watch": "Judy",
+          "posture": "Patrol",
+          "actions": [
+            {
+              "do": "set_patrol",
+              "nodes": [
+                "1",
+                "5",
+                "3",
+                "4",
+                "2"
+              ],
+              "target": "Judy"
+            }
+          ]
+        },
+        {
+          "id": "Judy_rule2",
+          "when": "on_enter",
+          "watch": "Judy",
+          "posture": "default",
+          "actions": [
+            {
+              "do": "set_posture",
+              "posture": "Patrol",
+              "target": "Judy"
+            }
+          ]
+        },
+        {
+          "id": "Judy_rule3",
+          "when": "proximity",
+          "watch": "Judy",
+          "actions": [
+            {
+              "do": "speak",
+              "text": "Oh Hey V",
+              "target": "Judy"
+            },
+            {
+              "do": "stop_move",
+              "target": "Judy"
+            },
+            {
+              "do": "face",
+              "at": "V",
+              "target": "Judy"
+            },
+            {
+              "do": "wait",
+              "seconds": 3,
+              "target": "Judy"
+            },
+            {
+              "do": "set_posture",
+              "posture": "Patrol",
+              "target": "Judy"
+            }
+          ]
+        }
+      ],
+      "fwd_y": 0.56228116269847,
+      "x": -1200.2386474609
+    },
+    {
+      "y": -212.22409057617,
+      "events": {},
+      "radius": 2,
+      "label": "1",
+      "action": "zone",
+      "z": 7.8948822021484,
+      "shape": "sphere",
+      "x": -1200.2386474609
+    },
+    {
+      "y": -204.78659057617,
+      "events": {},
+      "radius": 2,
+      "label": "2",
+      "action": "zone",
+      "z": 7.9274749755859,
+      "shape": "sphere",
+      "x": -1211.3685302734
+    },
+    {
+      "y": -194.43807983398,
+      "events": {},
+      "radius": 2,
+      "label": "3",
+      "action": "zone",
+      "z": 9.2560806274414,
+      "shape": "sphere",
+      "x": -1212.2961425781
+    },
+    {
+      "y": -201.61824035645,
+      "events": {},
+      "radius": 2,
+      "label": "4",
+      "action": "zone",
+      "z": 9.2560806274414,
+      "shape": "sphere",
+      "x": -1201.203125
+    },
+    {
+      "y": -208.04679870605,
+      "events": {},
+      "radius": 2,
+      "label": "5",
+      "action": "zone",
+      "z": 7.9129409790039,
+      "shape": "sphere",
+      "x": -1206.34765625
+    }
+  ],
+  "version": 5,
+  "events": {},
+  "flags": {},
+  "mission_id": "pathing_test_3",
+  "title": "Pathing Test 3"
+}

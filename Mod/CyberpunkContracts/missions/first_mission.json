@@ -1,0 +1,115 @@
+{
+  "mission_id": "first_mission",
+  "title": "First Mission",
+  "entities": [
+    {
+      "x": 1868.8973388672,
+      "sy": 4,
+      "action": "zone",
+      "shape": "box",
+      "sz": 3,
+      "y": -639.70886230469,
+      "z": 51.565933227539,
+      "label": "Box1",
+      "events": [
+        {
+          "id": "Box1_rule1",
+          "watch": "Box1",
+          "actions": {},
+          "when": "proximity"
+        }
+      ],
+      "sx": 4
+    },
+    {
+      "shape": "sphere",
+      "y": -633.73132324219,
+      "z": 51.032707214355,
+      "x": 1858.8892822266,
+      "radius": 3,
+      "action": "zone",
+      "events": {},
+      "label": "Sphere1"
+    },
+    {
+      "startAttitude": "friendly",
+      "x": 1892.4465332031,
+      "y": -632.03918457031,
+      "basePosture": "default",
+      "events": [
+        {
+          "zone": "Box1",
+          "watch": "NPC1",
+          "actions": [
+            {
+              "do": "move_to",
+              "target": "NPC1",
+              "destination": "Sphere1"
+            },
+            {
+              "do": "speak",
+              "target": "NPC1",
+              "text": "Moving to sphere1"
+            },
+            {
+              "do": "wait",
+              "target": "NPC1"
+            }
+          ],
+          "repeats": true,
+          "id": "NPC1_rule1",
+          "when": "inside"
+        },
+        {
+          "zone": "Sphere1",
+          "watch": "NPC1",
+          "actions": [
+            {
+              "do": "speak",
+              "target": "NPC1",
+              "text": "Moving to Box1"
+            },
+            {
+              "do": "move_to",
+              "target": "NPC1",
+              "destination": "Box1"
+            }
+          ],
+          "repeats": true,
+          "id": "NPC1_rule3",
+          "when": "inside"
+        },
+        {
+          "id": "NPC1_rule3",
+          "watch": "NPC1",
+          "actions": [
+            {
+              "do": "move_to",
+              "target": "NPC1",
+              "destination": "Box1"
+            }
+          ],
+          "when": "on_enter"
+        }
+      ],
+      "postures": [
+        "test"
+      ],
+      "label": "NPC1",
+      "fwd_x": -0.99328643083572,
+      "id": "Character.q001_scavenger_shotgun3",
+      "z": 53.109672546387,
+      "fwd_y": -0.11568212509155
+    }
+  ],
+  "flags": {},
+  "briefing": "test",
+  "version": 4,
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "events": {},
+  "objective": {
+    "type": "kill_target"
+  },
+  "fixer": "Wakako"
+}

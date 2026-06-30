@@ -1,0 +1,222 @@
+{
+  "events": [
+    {
+      "id": "quest_rule1",
+      "when": "on_enter",
+      "actions": [
+        {
+          "face": "a copy copy",
+          "do": "move_to",
+          "target": "Adam copy",
+          "destination": "Walk up"
+        },
+        {
+          "do": "wait",
+          "target": "quest",
+          "seconds": 2
+        }
+      ],
+      "watch": "quest",
+      "posture": "default"
+    },
+    {
+      "id": "quest_rule2",
+      "zone": "Walk up",
+      "when": "inside",
+      "actions": [
+        {
+          "do": "speak",
+          "target": "Adam copy",
+          "text": "TIME TO DIE"
+        },
+        {
+          "do": "set_attitude",
+          "target": "Adam copy",
+          "attitude": "hostile"
+        }
+      ],
+      "watch": "Adam copy",
+      "posture": "default"
+    }
+  ],
+  "objective": {
+    "type": "kill_target"
+  },
+  "briefing": "",
+  "fixer": "Wakako",
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "lifecycle": {
+    "finally": {
+      "actions": {}
+    },
+    "win": {
+      "groups": {}
+    },
+    "setup": {
+      "actions": {}
+    },
+    "lose": {
+      "groups": {}
+    }
+  },
+  "entities": [
+    {
+      "id": "Character.Jackie",
+      "z": 7.7139892578125,
+      "events": {},
+      "fwd_y": 0.94725555181503,
+      "x": -1215.6571044922,
+      "y": -221.53211975098,
+      "startAttitude": "friendly",
+      "fwd_x": 0.3204793035984,
+      "label": "a copy copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.6887359619141,
+      "events": {},
+      "fwd_y": 0.98686230182648,
+      "x": -1211.1694335938,
+      "y": -233.65231323242,
+      "startAttitude": "friendly",
+      "fwd_x": -0.16156373918056,
+      "label": "a copy copy copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.6851654052734,
+      "events": {},
+      "fwd_y": 0.98686230182648,
+      "x": -1209.2286376953,
+      "y": -233.33464050293,
+      "startAttitude": "friendly",
+      "fwd_x": -0.16156378388405,
+      "label": "a copy copy copy copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.6750793457031,
+      "events": {},
+      "fwd_y": 0.86031794548035,
+      "x": -1205.3907470703,
+      "y": -235.0322265625,
+      "startAttitude": "friendly",
+      "fwd_x": -0.50975775718689,
+      "label": "a copy copy copy copy copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.6661987304688,
+      "events": {},
+      "fwd_y": 0.87251567840576,
+      "x": -1200.8321533203,
+      "y": -234.63287353516,
+      "startAttitude": "friendly",
+      "fwd_x": -0.48858615756035,
+      "label": "a copy copy copy copy copy copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.7288208007813,
+      "events": {},
+      "fwd_y": 0.19419515132904,
+      "x": -1224.0994873047,
+      "y": -223.33874511719,
+      "startAttitude": "friendly",
+      "fwd_x": 0.98096299171448,
+      "label": "b"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.7288208007813,
+      "events": {},
+      "fwd_y": 0.19419515132904,
+      "x": -1224.0994873047,
+      "y": -223.33874511719,
+      "startAttitude": "friendly",
+      "fwd_x": 0.98096299171448,
+      "label": "b copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.7351989746094,
+      "events": {},
+      "fwd_y": 0.054910242557526,
+      "x": -1224.6854248047,
+      "y": -219.38743591309,
+      "startAttitude": "friendly",
+      "fwd_x": 0.99849140644073,
+      "label": "b copy copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.7400436401367,
+      "events": {},
+      "fwd_y": -0.50982630252838,
+      "x": -1221.84765625,
+      "y": -211.35748291016,
+      "startAttitude": "friendly",
+      "fwd_x": 0.86027747392654,
+      "label": "b copy copy copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.7377624511719,
+      "events": {},
+      "fwd_y": -0.76438462734222,
+      "x": -1217.8037109375,
+      "y": -206.93780517578,
+      "startAttitude": "friendly",
+      "fwd_x": 0.64476072788239,
+      "label": "b copy copy copy copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.6792755126953,
+      "events": {},
+      "fwd_y": 0.80698370933533,
+      "x": -1201.6140136719,
+      "y": -226.07608032227,
+      "startAttitude": "friendly",
+      "fwd_x": -0.59057372808456,
+      "label": "b copy copy copy copy copy"
+    },
+    {
+      "id": "Character.Jackie",
+      "z": 7.6750259399414,
+      "events": {},
+      "fwd_y": 0.77881568670273,
+      "x": -1197.53125,
+      "y": -223.02534484863,
+      "startAttitude": "friendly",
+      "fwd_x": -0.62725287675858,
+      "label": "b copy copy copy copy copy copy"
+    },
+    {
+      "id": "Character.Smasher",
+      "z": 9.2560806274414,
+      "events": {},
+      "fwd_y": -0.97850120067596,
+      "x": -1206.6618652344,
+      "y": -195.6605682373,
+      "startAttitude": "neutral",
+      "fwd_x": -0.20624263584614,
+      "label": "Adam copy"
+    },
+    {
+      "x": -1207.8120117188,
+      "y": -211.17660522461,
+      "events": {},
+      "z": 7.9237976074219,
+      "action": "zone",
+      "shape": "sphere",
+      "radius": 3,
+      "label": "Walk up"
+    }
+  ],
+  "title": "Combat Test",
+  "flags": {},
+  "version": 5,
+  "mission_id": "combat_test"
+}

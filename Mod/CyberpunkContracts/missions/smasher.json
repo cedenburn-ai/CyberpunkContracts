@@ -1,0 +1,173 @@
+{
+  "mission_id": "smasher",
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "objective": {
+    "type": "kill_target"
+  },
+  "version": 5,
+  "lifecycle": {
+    "setup": {
+      "actions": {}
+    },
+    "finally": {
+      "actions": {}
+    },
+    "win": {
+      "groups": {}
+    },
+    "lose": {
+      "groups": {}
+    }
+  },
+  "events": {},
+  "title": "Smasher",
+  "flags": {},
+  "fixer": "Wakako",
+  "entities": [
+    {
+      "x": -1210.8432617188,
+      "fwd_y": -0.82349747913032,
+      "id": "Character.Smasher",
+      "startAttitude": "hostile",
+      "label": "Adam",
+      "events": {},
+      "y": -210.5322265625,
+      "z": 7.9037857055664,
+      "fwd_x": -0.56731992902242
+    },
+    {
+      "x": -1215.6571044922,
+      "fwd_y": 0.94725555181503,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "label": "a copy copy",
+      "events": {},
+      "z": 7.7139892578125,
+      "y": -221.53211975098,
+      "fwd_x": 0.3204793035984
+    },
+    {
+      "x": -1211.1694335938,
+      "fwd_y": 0.98686230182648,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "z": 7.6887359619141,
+      "events": {},
+      "label": "a copy copy copy",
+      "fwd_x": -0.16156373918056,
+      "y": -233.65231323242
+    },
+    {
+      "x": -1209.2286376953,
+      "fwd_y": 0.98686230182648,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "label": "a copy copy copy copy",
+      "events": {},
+      "z": 7.6851654052734,
+      "y": -233.33464050293,
+      "fwd_x": -0.16156378388405
+    },
+    {
+      "x": -1205.3907470703,
+      "fwd_y": 0.86031794548035,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "z": 7.6750793457031,
+      "events": {},
+      "label": "a copy copy copy copy copy",
+      "fwd_x": -0.50975775718689,
+      "y": -235.0322265625
+    },
+    {
+      "x": -1200.8321533203,
+      "fwd_y": 0.87251567840576,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "label": "a copy copy copy copy copy copy",
+      "events": {},
+      "z": 7.6661987304688,
+      "y": -234.63287353516,
+      "fwd_x": -0.48858615756035
+    },
+    {
+      "x": -1224.0994873047,
+      "fwd_y": 0.19419515132904,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "z": 7.7288208007813,
+      "events": {},
+      "label": "b",
+      "fwd_x": 0.98096299171448,
+      "y": -223.33874511719
+    },
+    {
+      "x": -1224.0994873047,
+      "fwd_y": 0.19419515132904,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "label": "b copy",
+      "events": {},
+      "z": 7.7288208007813,
+      "y": -223.33874511719,
+      "fwd_x": 0.98096299171448
+    },
+    {
+      "x": -1224.6854248047,
+      "fwd_y": 0.054910242557526,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "z": 7.7351989746094,
+      "events": {},
+      "label": "b copy copy",
+      "fwd_x": 0.99849140644073,
+      "y": -219.38743591309
+    },
+    {
+      "x": -1221.84765625,
+      "fwd_y": -0.50982630252838,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "label": "b copy copy copy",
+      "events": {},
+      "z": 7.7400436401367,
+      "y": -211.35748291016,
+      "fwd_x": 0.86027747392654
+    },
+    {
+      "x": -1217.8037109375,
+      "fwd_y": -0.76438462734222,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "z": 7.7377624511719,
+      "events": {},
+      "label": "b copy copy copy copy",
+      "fwd_x": 0.64476072788239,
+      "y": -206.93780517578
+    },
+    {
+      "x": -1201.6140136719,
+      "fwd_y": 0.80698370933533,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "label": "b copy copy copy copy copy",
+      "events": {},
+      "z": 7.6792755126953,
+      "y": -226.07608032227,
+      "fwd_x": -0.59057372808456
+    },
+    {
+      "x": -1197.53125,
+      "fwd_y": 0.77881568670273,
+      "id": "Character.voodooboys_grunt1_fmelee2rare_baseball_ma_rare",
+      "startAttitude": "friendly",
+      "z": 7.6750259399414,
+      "events": {},
+      "label": "b copy copy copy copy copy copy",
+      "fwd_x": -0.62725287675858,
+      "y": -223.02534484863
+    }
+  ],
+  "briefing": ""
+}

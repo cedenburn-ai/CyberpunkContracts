@@ -1,0 +1,148 @@
+{
+  "flags": {},
+  "events": [
+    {
+      "actions": [
+        {
+          "do": "open",
+          "target": "Device1"
+        },
+        {
+          "text": "1",
+          "do": "speak",
+          "target": "Device1"
+        }
+      ],
+      "when": "flag",
+      "value": 1,
+      "watch": "quest",
+      "id": "quest_rule1",
+      "flag": "DoorOpen"
+    },
+    {
+      "actions": [
+        {
+          "text": "2",
+          "do": "speak",
+          "target": "Device1"
+        }
+      ],
+      "when": "flag",
+      "value": 2,
+      "watch": "quest",
+      "id": "quest_rule2",
+      "flag": "DoorOpen"
+    }
+  ],
+  "lifecycle": {
+    "finally": {
+      "actions": [
+        {
+          "do": "quest_close",
+          "value": 1,
+          "op": "set",
+          "flag": "",
+          "target": "Device1"
+        },
+        {
+          "do": "lock",
+          "value": 1,
+          "op": "set",
+          "flag": "",
+          "target": "Device1"
+        }
+      ]
+    },
+    "win": {
+      "groups": [
+        [
+          {
+            "after": 600000,
+            "when": "timer"
+          }
+        ]
+      ]
+    },
+    "setup": {
+      "actions": [
+        {
+          "value": 1,
+          "max": 2,
+          "do": "set_flag",
+          "op": "random",
+          "flag": "DoorOpen",
+          "min": 1
+        }
+      ]
+    },
+    "lose": {
+      "groups": {}
+    }
+  },
+  "mission_id": "pathing_test_2",
+  "entities": [
+    {
+      "x": -1126.6868896484,
+      "y": 1321.4431152344,
+      "class": "ToCName{ hash_lo = 0x608CE6C9, hash_hi = 0x037CF773 --[[ Door --]] }",
+      "action": "device",
+      "label": "Device1",
+      "events": {},
+      "hash": "14087530378419798291",
+      "z": 28
+    },
+    {
+      "x": -1163.3559570313,
+      "y": 1325.3967285156,
+      "events": {},
+      "id": "Character.Smasher",
+      "startAttitude": "hostile",
+      "label": "a",
+      "fwd_x": -0.022005297644802,
+      "fwd_y": -0.99975785412047,
+      "z": 28.033500671387
+    },
+    {
+      "x": -1167.677734375,
+      "y": 1326.4664306641,
+      "events": {},
+      "id": "Character.Smasher",
+      "startAttitude": "friendly",
+      "label": "b",
+      "fwd_x": 0.83809086583929,
+      "fwd_y": -0.54553065963037,
+      "z": 28.059959411621
+    },
+    {
+      "x": -1167.6723632813,
+      "y": 1321.4095458984,
+      "events": {},
+      "id": "Character.Smasher",
+      "startAttitude": "hostile",
+      "label": "c",
+      "fwd_x": 0.56584387143273,
+      "fwd_y": 0.82451240934386,
+      "z": 28
+    },
+    {
+      "x": -1163.4603271484,
+      "y": 1322.0458984375,
+      "events": {},
+      "id": "Character.Ozob",
+      "startAttitude": "friendly",
+      "label": "o",
+      "fwd_x": -0.82844239030946,
+      "fwd_y": 0.56007428608922,
+      "z": 28.03645324707
+    }
+  ],
+  "fixer": "Wakako",
+  "title": "Pathing Test 2",
+  "objective": {
+    "type": "kill_target"
+  },
+  "version": 5,
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "briefing": "Pathing Test 2"
+}

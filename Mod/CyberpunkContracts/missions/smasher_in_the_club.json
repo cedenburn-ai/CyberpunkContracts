@@ -1,0 +1,70 @@
+{
+  "objective": {
+    "type": "kill_target"
+  },
+  "briefing": "",
+  "lifecycle": {
+    "finally": {
+      "actions": {}
+    },
+    "win": {
+      "groups": [
+        [
+          {
+            "watch": "Smasher",
+            "when": "dies"
+          }
+        ]
+      ]
+    },
+    "lose": {
+      "groups": {}
+    },
+    "setup": {
+      "actions": {}
+    }
+  },
+  "reward_money": 1000,
+  "reward_xp": 250,
+  "flags": {},
+  "events": {},
+  "mission_id": "smasher_in_the_club",
+  "entities": [
+    {
+      "events": {},
+      "z": 439.77249145508,
+      "id": "Character.Smasher",
+      "x": -1887.8338623047,
+      "y": -2270.4233398438,
+      "label": "Smasher",
+      "fwd_y": 0.99980719246121,
+      "fwd_x": -0.019636137675883,
+      "startAttitude": "hostile"
+    },
+    {
+      "events": {},
+      "z": 439.77191162109,
+      "id": "Character.Smasher",
+      "x": -1882.8669433594,
+      "y": -2258.970703125,
+      "label": "Smasher copy",
+      "startAttitude": "friendly",
+      "fwd_x": -0.50584971904755,
+      "fwd_y": -0.86262154579163
+    },
+    {
+      "events": {},
+      "z": 439.77191162109,
+      "id": "Character.Smasher",
+      "x": -1894.3879394531,
+      "y": -2258.0207519531,
+      "label": "Smasher copy copy",
+      "fwd_y": -0.8446809053421,
+      "fwd_x": 0.53527021408081,
+      "startAttitude": "hostile"
+    }
+  ],
+  "version": 5,
+  "title": "Smasher In the club",
+  "fixer": "Wakako"
+}
